@@ -27,7 +27,7 @@ var Loading = (loadingDelayHidden = 0) =>{
                     hideLoading()
                 }else{
                     imgs.forEach(function(img) {
-                        img.addEventListener('load',incrementCounterImgs,false);
+                        img.addEventListener('load', incrementCounterImgs, false);
                     })
                 }
             })
