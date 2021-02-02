@@ -1,7 +1,5 @@
 const buttonReturnFirstPage = document.getElementById('return-first-page');
 
-// let newArray = [];
-
 const filterBreed = () => {
     fetch('https://dog.ceo/api/breeds/list/all')
     .then(res => res.json())
@@ -20,12 +18,12 @@ const filterBreed = () => {
 };
 filterBreed();
 
-function getValueParameter(letter) {
+function getValueParameter(selectLetter) {
     const pageURL = window.location.search.substring(1);
     const sURLVariables = pageURL.split('&');
     for (let i = 0; i < sURLVariables.length; i++) {
         const valueParameter = sURLVariables[i].split('=');
-        if (valueParameter[0] == letter) {
+        if (valueParameter[0] == selectLetter) {
             return valueParameter[1];
         }
     }
